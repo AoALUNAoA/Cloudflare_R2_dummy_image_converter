@@ -1,3 +1,5 @@
+![Build Status](https://github.com/AoALUNAoA/Cloudflare_R2_dummy_image_converter/actions/workflows/python-app.yml/badge.svg)
+
 # Cloudflare_R2_dummy_image_converter
 My dummy tool allows you to automatically batch process images in your bucket, from a specified timestamp up to the latest timestamp of images uploaded to that bucket, rather than entire bucket images. You simply select the source image path, the destination image path, and enter the target timestamp.<br><br>
 Once you've stored a lot of images in your Cloudflare R2 bucket, you might need to convert some images within a specific timeframe to a designated format in some cases, rather than converting the entire bucket. This can present some challenges.
