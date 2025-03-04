@@ -53,9 +53,9 @@ def upload_image(image_data, key):
 
 def main():
     # Specify path in your CF bucket and timestamp
-    input_folder = input("Please enter the path to the images in CF bucket you want to process: ")
-    output_folder = input("Please enter the destination folder path for the converted images: ") # could be the same as input_folder
-    timestamp_str = input("Provide the starting timestamp in the following exactly format: YYYY-MM-DD HH:MM:SS: ") # try UTC-6 timestamp
+    input_folder = os.getenv('input_folder')
+    output_folder = os.getenv('output_folder')
+    timestamp_str = os.getenv('timestamp_str')
     timestamp = datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S")
 
     # List all images in the input folder since the specified timestamp
