@@ -16,15 +16,15 @@ pip install requests boto3 pillow
 python3 Cloudflare_R2_dummy_image_converter.py
 ```
 After running the script, you'll be prompted to enter input&output path and target timestamp in the command line. You could obtain this information from your Cloudflare R2 bucket's folder path and the timestamp of your desired target images.<br>
-then You should get something like this:
+You could get something like this:
 ```shell
 Please enter the path to the images in CF bucket you want to process: posters/
 Please enter the destination folder path for the converted images: posters/
 Provide the starting timestamp in the following exactly format: YYYY-MM-DD HH:MM:SS: 2025-03-03 02:57:26
 Uploaded Successfully: posters/poster_245891.webp
 Successfully Done!: posters/poster_245891.jpg -> posters/poster_245891.webp
-Uploaded Successfully: posters/poster_1069945.webp
-Successfully Done!: posters/poster_1069945.jpg -> posters/poster_1069945.webp
+Uploaded Successfully: posters/poster_11527.webp
+Successfully Done!: posters/poster_11527.jpg -> posters/poster_11527.webp
 .
 .
 .
@@ -32,8 +32,8 @@ Successfully Done!: posters/poster_1069945.jpg -> posters/poster_1069945.webp
 ## 3.Frontend
 ```html
 <picture>
-    <source srcset="https://your_Cloudflare_R2_bucket_domain.com/poster_245891.webp" type="image/webp" />
-    <source srcset="https://your_Cloudflare_R2_bucket_domain.com/poster_245891.jpg" type="image/jpeg" />
+    <source srcset="https://your_Cloudflare_R2_bucket_domain.com/posters/poster_245891.webp" type="image/webp" />
+    <source srcset="https://your_Cloudflare_R2_bucket_domain.com/posters/poster_245891.jpg" type="image/jpeg" />
     <img class="poster" src="https://your_Cloudflare_R2_bucket_domain.com/poster_245891.jpg" alt="photo" />
 </picture>
 ```
