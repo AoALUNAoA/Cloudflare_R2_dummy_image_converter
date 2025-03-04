@@ -12,10 +12,10 @@ from PIL import Image
 from datetime import datetime
 
 # Cloudflare R2 config
-R2_ACCESS_KEY_ID = '${{ secrets.R2_ACCESS_KEY_ID }}'
-R2_SECRET_ACCESS_KEY = '${{ secrets.R2_SECRET_ACCESS_KEY }}'
-R2_BUCKET_NAME = '${{ secrets.R2_BUCKET_NAME }}'
-R2_ENDPOINT_URL = '${{ secrets.R2_ENDPOINT_URL }}'
+R2_ACCESS_KEY_ID = os.getenv('R2_ACCESS_KEY_ID')
+R2_SECRET_ACCESS_KEY = os.getenv('R2_SECRET_ACCESS_KEY')
+R2_BUCKET_NAME = os.getenv('R2_BUCKET_NAME')
+R2_ENDPOINT_URL = os.getenv('R2_ENDPOINT_URL')
 
 # Initiate Boto3 client
 s3_client = boto3.client(
